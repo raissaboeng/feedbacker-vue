@@ -11,14 +11,20 @@ module.exports = {
     parser: 'babel-eslint'
   },
   rules: {
+    'semi': [
+      'error',
+      'always'
+    ],
+    'vue/no-deprecated-slot-attribute': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-inferrable-types': 'off',
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
   },
   overrides: [
     {
       files: [
-        '**/__tests__/*.{j,t}s?(x)',
-        '**/tests/unit/**/*.spec.{j,t}s?(x)'
+        '**/*.spec.js'
       ],
       env: {
         jest: true
