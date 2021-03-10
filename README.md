@@ -12,6 +12,7 @@ O Feedbacker é uma aplicação web para criação de um widget para feedbacks q
 - JavaScript
 - Vue.js
 - Docker
+- Tailwindcss
 
 ### :key: Executar a aplicação
 
