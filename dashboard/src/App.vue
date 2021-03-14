@@ -1,5 +1,5 @@
 <template>
-<modal-factory />
+  <modal-factory />
   <router-view />
 </template>
 <script>

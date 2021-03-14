@@ -12,8 +12,7 @@
           href="mailto:"
           class="px-6 py-2 mt-10 font-bold text-white rounded-full bg-brand-main focus:outline-none"
         >
-          Nos mande um email!</a
-        >
+          Nos mande um email!</a>
       </div>
     </div>
   </div>

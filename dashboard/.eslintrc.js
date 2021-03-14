@@ -1,34 +1,34 @@
 module.exports = {
-  root: true,
   env: {
+    es6: true,
     node: true
   },
   extends: [
-    'plugin:vue/vue3-essential',
-    '@vue/standard'
+    'plugin:vue/essential',
+    'standard'
   ],
-  parserOptions: {
-    parser: 'babel-eslint'
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly'
   },
+  parser: 'vue-eslint-parser',
+  parserOptions: {
+    parser: 'babel-eslint',
+    ecmaVersion: 2018,
+    sourceType: 'module'
+  },
+  plugins: [
+    'vue'
+  ],
   rules: {
-    'semi': [
+    'vue/no-multiple-template-root': 0,
+    quotes: [
+      'error',
+      'single'
+    ],
+    semi: [
       'error',
       'always'
-    ],
-    'vue/no-deprecated-slot-attribute': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/no-inferrable-types': 'off',
-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
-  },
-  overrides: [
-    {
-      files: [
-        '**/*.spec.js'
-      ],
-      env: {
-        jest: true
-      }
-    }
-  ]
-}
+    ]
+  }
+};
