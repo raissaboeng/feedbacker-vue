@@ -11,7 +11,7 @@
     </button>
   </div>
 
-  <div class="mt-16">
+  <div class="mt-10">
     <form @submit.prevent="handleSubmit">
       <label class="block">
         <span class="text-lg font-medium text-gray-800">E-mail</span>
@@ -30,7 +30,7 @@
         </span>
       </label>
 
-      <label class="block">
+      <label class="block mt-9">
         <span class="text-lg font-medium text-gray-800">Senha</span>
         <input
           v-model="state.password.value"
@@ -62,21 +62,34 @@
 
 <script>
 import { reactive } from 'vue';
+import { useField } from 'vee-validate';
 import useModal from '../../hooks/useModal';
+import { validateEmptyAndLegnth3, validateEmptyAndEmail } from '../../utils/validators';
 
 export default {
   setup () {
     const modal = useModal();
+
+    const {
+      value: emailValue,
+      errorMessage: emailErrorMessage
+    } = useField('email', validateEmptyAndEmail);
+
+    const {
+      value: passwordValue,
+      errorMessage: passwordErrorMessage
+    } = useField('password', validateEmptyAndLegnth3);
+
     const state = reactive({
       hasErrors: false,
       isLoading: false,
       email: {
-        value: '',
-        errorMessage: ''
+        value: emailValue,
+        errorMessage: emailErrorMessage
       },
       password: {
-        value: '',
-        errorMessage: ''
+        value: passwordValue,
+        errorMessage: passwordErrorMessage
       }
     });
 
