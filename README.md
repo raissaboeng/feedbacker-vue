@@ -18,7 +18,9 @@ O Feedbacker é uma aplicação web para criação de um widget para feedbacks q
 ### :key: Executar a aplicação
 
 É necessário ter levantado o servidor backend, neste projeto foi utilizado o docker.
-Para levantar o servidor abra o Readme.md da pasta backend onde se encontram os comandos para isso, além de ter que estar executando o docker em sua máquina pra que possa funcionar.
+Abrindo a pasta backend executar os comandos: 
+$ npm run build
+$ npm run container
 
 ### :bulb: Melhorias
 
