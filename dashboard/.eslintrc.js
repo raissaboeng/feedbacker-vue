@@ -4,7 +4,7 @@ module.exports = {
     node: true
   },
   extends: [
-    'plugin:vue/essential',
+    'plugin:vue/vue3-essential',
     'standard'
   ],
   globals: {
@@ -21,7 +21,6 @@ module.exports = {
     'vue'
   ],
   rules: {
-    'vue/no-multiple-template-root': 0,
     quotes: [
       'error',
       'single'

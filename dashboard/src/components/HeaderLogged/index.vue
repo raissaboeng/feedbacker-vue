@@ -1,5 +1,6 @@
 <template>
   <div class="flex items-center justify-between w-4/5 max-w-6xl py-10">
+
     <div class="w-28 lg:w-36">
       <img
         class="w-full"
@@ -7,6 +8,7 @@
         alt="logo"
       >
     </div>
+
     <div class="flex">
       <ul class="flex list-none">
         <li
