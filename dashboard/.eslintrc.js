@@ -5,7 +5,7 @@ module.exports = {
   },
   extends: [
     'plugin:vue/vue3-essential',
-    'standard'
+    '@vue/standard'
   ],
   globals: {
     Atomics: 'readonly',
@@ -29,5 +29,15 @@ module.exports = {
       'error',
       'always'
     ]
-  }
+  },
+  overrrides: [
+    {
+      files: [
+        '**/*.spec.js'
+      ],
+      env: {
+        jest: true
+      }
+    }
+  ]
 };
