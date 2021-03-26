@@ -30,7 +30,7 @@ module.exports = {
       'always'
     ]
   },
-  overrrides: [
+  overrides: [
     {
       files: [
         '**/*.spec.js'
