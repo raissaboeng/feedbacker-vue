@@ -19,6 +19,6 @@ describe('<Home />', () => {
             }
         });
 
-        expect(wrapper.html().toMatchSnapshot);
-    })
+        expect(wrapper.html()).toMatchSnapshot();
+    });
 })
